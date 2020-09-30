@@ -2,7 +2,7 @@
 def valid_move?(board, index)
   if ((index >=0 && index < 9)
     return true
-  if !position_taken?
+  if !(position_taken? == true)
     return true
   end
 end
@@ -11,7 +11,7 @@ end
 def position_taken?
 board = ["","","","","","","","",""]
 user_input = gets.strip
-index = user_input.to_i
+index = user_input.to_i - 1
   if board[index] == "X" || board[index] == "O"
     return true
   elsif board[index] == "" || board[index] == " "
