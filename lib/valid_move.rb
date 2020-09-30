@@ -1,6 +1,6 @@
 # code your #valid_move? method here
 def valid_move?(board, index)
-  if position_taken? && (index >=0 && index < 9)
+  if (position_taken? == false) && (index >=0 && index < 9)
     return true
   else
     return NIL
@@ -14,7 +14,7 @@ user_input = gets.strip
 index = user_input.to_i
   if board[index] == "X" || board[index] == "O"
     return true
-  else
+  elsif board[index] == "" || board[index] == " "
     return false
   end
 end
